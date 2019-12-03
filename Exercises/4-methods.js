@@ -4,9 +4,13 @@ const methods = iface => {
   let arr = [];
   const n = iface.length;
   let i = 0;
-  for (let [key, value] of Object.entries(iface)) {
+  /*for (let [key, value] of Object.entries(iface)) {
     arr.push();
     arr[i++] = [key, value.length];
+  }*/
+  for (let a in iface) {
+    arr.push();
+    arr[i++] = [a, iface[a].length];
   }
   const m = arr.length;
   for (let i = 0; i < m; i++)
